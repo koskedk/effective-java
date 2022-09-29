@@ -2,6 +2,7 @@ package org.afyahmis.chapter01;
 
 import org.afyahmis.chapter01.artifacts.Country;
 import org.afyahmis.chapter01.artifacts.County;
+import org.afyahmis.chapter01.artifacts.PhoneNumber;
 
 public class Lesson101 {
 
@@ -18,5 +19,9 @@ public class Lesson101 {
                 .Senator(senator)
                 .WomenRep(womenRep)
                 .Build();
+    }
+
+    public boolean checkIfEqual(PhoneNumber a, PhoneNumber b) {
+        return a.equals(b);
     }
 }

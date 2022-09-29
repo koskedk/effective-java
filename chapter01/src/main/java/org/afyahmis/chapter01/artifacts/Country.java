@@ -1,5 +1,8 @@
 package org.afyahmis.chapter01.artifacts;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Country {
     private final String code;
     private final String name;
@@ -39,6 +42,12 @@ public class Country {
         this.code=builder.code;
         this.name=builder.name;
         this.region=builder.region;
+    }
+
+    public boolean isValidCode() {
+        Pattern pattern = Pattern.compile("ke", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(this.code);
+        return matcher.find();
     }
 
 }
